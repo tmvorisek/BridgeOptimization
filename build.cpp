@@ -37,7 +37,7 @@ vector<Bridge> generate_bridges(const vector<int> & indicies, const vector<Bridg
     return v;
 }
 
-void generate_combinations(int offset, int k, vector<int> indicies, const vector<Bridge> & bridges, int & max){
+void generate_combinations(int offset, int k, vector<int> & indicies, const vector<Bridge> & bridges, int & max){
   if (k == 0) {
     vector<Bridge> combination = generate_bridges(indicies, bridges);
     if (!find_collisions(combination)){
